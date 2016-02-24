@@ -138,13 +138,23 @@ body {
   position: absolute;
   width: 1px; }
 
+.nav .nav__top li, .nav .nav__top li:last-child, .nav .nav__top li:nth-last-child(2), .nav .nav__bottom li {
+  min-width: 3.5em;
+  padding: 0.5em 0;
+  float: left;
+  display: block;
+  margin-right: 1.35446%;
+  width: 7.09175%;
+  text-align: center; }
+  .nav .nav__top li:last-child, .nav .nav__bottom li:last-child {
+    margin-right: 0; }
+
 .nav {
   background: #005689; }
   .nav a {
     color: #ddd; }
-  .nav li {
-    padding: 0.5em 0; }
   .nav .nav__top {
+    height: 2.625em;
     display: block; }
     .nav .nav__top::after {
       clear: both;
@@ -152,56 +162,49 @@ body {
       display: table; }
     .nav .nav__top i {
       margin-right: 0.625em; }
-    .nav .nav__top li {
-      float: left;
+    @media screen and (min-width: 1024px) {
+      .nav .nav__top li {
+        min-width: 10em; } }
+    .nav .nav__top li:last-child {
+      float: right;
       display: block;
-      margin-right: 1.35446%;
-      width: 7.09175%;
-      text-align: center; }
-      .nav .nav__top li:last-child {
-        margin-right: 0; }
-      .nav .nav__top li:last-child {
-        float: right;
-        display: block;
-        margin-left: 1.35446%;
-        width: 7.09175%; }
-        .nav .nav__top li:last-child:last-child {
-          margin-left: 0; }
-      .nav .nav__top li:nth-last-child(2) {
-        float: right;
-        display: block;
-        margin-left: 1.35446%;
-        width: 7.09175%; }
-        .nav .nav__top li:nth-last-child(2):last-child {
-          margin-left: 0; }
-
-.logo {
-  display: block; }
-  .logo::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-picture {
-  padding: 1em;
-  float: right; }
-
-.nav__bottom {
-  display: block;
-  overflow: hidden;
-  background: #004065;
-  text-align: center; }
-  .nav__bottom::after {
-    clear: both;
-    content: "";
-    display: table; }
-  .nav__bottom li {
-    float: left;
+      margin-left: 1.35446%;
+      width: 7.09175%; }
+      .nav .nav__top li:last-child:last-child {
+        margin-left: 0; }
+    .nav .nav__top li:nth-last-child(2) {
+      float: right;
+      display: block;
+      margin-left: 1.35446%;
+      width: 7.09175%; }
+      .nav .nav__top li:nth-last-child(2):last-child {
+        margin-left: 0; }
+    .nav .nav__top li span {
+      display: none; }
+      @media screen and (min-width: 1024px) {
+        .nav .nav__top li span {
+          display: inline-block; } }
+  .nav .logo {
+    display: block; }
+    .nav .logo::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .nav picture {
+    padding: 1em;
+    float: right; }
+  .nav .nav__bottom {
+    height: 48px;
     display: block;
-    margin-right: 1.35446%;
-    width: 7.09175%; }
-    .nav__bottom li:last-child {
-      margin-right: 0; }
+    overflow: hidden;
+    background: #004065;
+    text-align: center; }
+    .nav .nav__bottom::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .nav .nav__bottom li:first-child {
+      background: #444444; }
 
 .footer {
   overflow: auto; }
