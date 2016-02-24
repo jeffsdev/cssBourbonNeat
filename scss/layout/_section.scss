@@ -3,12 +3,13 @@
 // -----------------------------------------------------------------------------
 
 %testing {
-  height: 100px;
+  min-height: 100px;
   border: 1px dotted black;
 }
 
+
 %bottom {
-  @include span-columns(6);
+  @include span-columns(12);
   @extend %testing;
   @include media(map-get($breakpoints, 'medium')) {
     @include span-columns(3);
@@ -24,13 +25,16 @@ section {
   @include span-columns(12);
   @extend %testing;
 
-  @include media(map-get($breakpoints, 'medium')) {
+  @include media(map-get($breakpoints, 'large')) {
     @include span-columns(2);
   }
 }
 
 .content {
   @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(12);
+  }
+  @include media(map-get($breakpoints, 'large')) {
     @include span-columns(10);
   }
 }
@@ -51,8 +55,8 @@ section {
       @include span-columns(3);
     }
   }
-
 }
+
 .bottom {
   @include row();
   &__tall {
@@ -63,14 +67,12 @@ section {
       @extend %testing;
       }
     }
-
   &__small{
     @include media(map-get($breakpoints, 'medium')) {
       @include span-columns(3);
     }
   }
 }
-
 
 .article-small {
   @include span-columns(12);

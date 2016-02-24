@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the nav of the site/application.
+// -----------------------------------------------------------------------------
+
+.nav__top{
+  @include row();
+  li{
+    @include span-columns(1);
+    &:last-child {
+      @include direction-context(right-to-left) {
+       @include span-columns(1);
+      }
+    }
+    &:nth-last-child(2) {
+      @include direction-context(right-to-left) {
+       @include span-columns(1);
+     }
+    }
+  }
+}
+
+.logo{
+  @include row();
+}
+picture {
+  float: right;
+}
+
+.nav__bottom {
+  @include row();
+  overflow: hidden;
+  li {
+    @include span-columns(1);
+  }
+}

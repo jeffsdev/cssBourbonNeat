@@ -138,15 +138,68 @@ body {
   position: absolute;
   width: 1px; }
 
+.nav__top {
+  display: block; }
+  .nav__top::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .nav__top li {
+    float: left;
+    display: block;
+    margin-right: 1.35446%;
+    width: 7.09175%; }
+    .nav__top li:last-child {
+      margin-right: 0; }
+    .nav__top li:last-child {
+      float: right;
+      display: block;
+      margin-left: 1.35446%;
+      width: 7.09175%; }
+      .nav__top li:last-child:last-child {
+        margin-left: 0; }
+    .nav__top li:nth-last-child(2) {
+      float: right;
+      display: block;
+      margin-left: 1.35446%;
+      width: 7.09175%; }
+      .nav__top li:nth-last-child(2):last-child {
+        margin-left: 0; }
+
+.logo {
+  display: block; }
+  .logo::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+picture {
+  float: right; }
+
+.nav__bottom {
+  display: block;
+  overflow: hidden; }
+  .nav__bottom::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .nav__bottom li {
+    float: left;
+    display: block;
+    margin-right: 1.35446%;
+    width: 7.09175%; }
+    .nav__bottom li:last-child {
+      margin-right: 0; }
+
 .bottom__tall, .bottom__tall--pink, .header, .top__featured, .top__side, .article-small {
-  height: 100px;
+  min-height: 100px;
   border: 1px dotted black; }
 
 .bottom__tall, .bottom__tall--pink {
   float: left;
   display: block;
   margin-right: 1.35446%;
-  width: 49.32277%; }
+  width: 100%; }
   .bottom__tall:last-child, .bottom__tall--pink:last-child {
     margin-right: 0; }
   @media screen and (min-width: 768px) {
@@ -169,7 +222,7 @@ section {
   width: 100%; }
   .header:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1024px) {
     .header {
       float: left;
       display: block;
@@ -179,6 +232,14 @@ section {
         margin-right: 0; } }
 
 @media screen and (min-width: 768px) {
+  .content {
+    float: left;
+    display: block;
+    margin-right: 1.35446%;
+    width: 100%; }
+    .content:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 1024px) {
   .content {
     float: left;
     display: block;
