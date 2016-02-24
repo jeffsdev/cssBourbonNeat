@@ -1,3 +1,22 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer {
+  @extend %testing;
+  overflow: auto;
+  ul {
+    @include span-columns(6);
+    @extend %testing;
+    li {
+      width: 33%;
+      float: left;
+      @extend %testing;
+    }
+  }
+  &__form {
+    @include span-columns(6);
+    @extend %testing;
+    background-color: green;
+  }
+}

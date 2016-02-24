@@ -2,19 +2,33 @@
 // This file contains all styles related to the nav of the site/application.
 // -----------------------------------------------------------------------------
 
-.nav__top{
-  @include row();
-  li{
-    @include span-columns(1);
-    &:last-child {
-      @include direction-context(right-to-left) {
-       @include span-columns(1);
-      }
+.nav {
+  background: $nav-blue;
+  a {
+    color: $text-white;
+  }
+  li {
+    padding: 0.5em 0;
+  }
+  .nav__top{
+    @include row();
+    i {
+      margin-right: em(10px);
     }
-    &:nth-last-child(2) {
-      @include direction-context(right-to-left) {
-       @include span-columns(1);
-     }
+    li{
+      @include span-columns(1);
+
+      text-align: center;
+      &:last-child {
+        @include direction-context(right-to-left) {
+         @include span-columns(1);
+        }
+      }
+      &:nth-last-child(2) {
+        @include direction-context(right-to-left) {
+         @include span-columns(1);
+       }
+      }
     }
   }
 }
@@ -23,12 +37,15 @@
   @include row();
 }
 picture {
+  padding: 1em;
   float: right;
 }
 
 .nav__bottom {
   @include row();
   overflow: hidden;
+  background: darken($nav-blue, 7%);
+  text-align: center;
   li {
     @include span-columns(1);
   }
