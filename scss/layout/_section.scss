@@ -1,0 +1,78 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the sections of the site/application.
+// -----------------------------------------------------------------------------
+
+%testing {
+  height: 100px;
+  border: 1px dotted black;
+}
+
+%bottom {
+  @include span-columns(6);
+  @extend %testing;
+  @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(3);
+  }
+}
+
+section {
+  width: 95%;
+  margin: auto;
+}
+
+.header {
+  @include span-columns(12);
+  @extend %testing;
+
+  @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(2);
+  }
+}
+
+.content {
+  @include media(map-get($breakpoints, 'medium')) {
+    @include span-columns(10);
+  }
+}
+
+.top {
+  @include row();
+  &__featured {
+    @include span-columns(12);
+    @extend %testing;
+    @include media(map-get($breakpoints, 'medium')) {
+      @include span-columns(9);
+    }
+  }
+  &__side {
+    @include span-columns(12);
+    @extend %testing;
+    @include media(map-get($breakpoints, 'medium')) {
+      @include span-columns(3);
+    }
+  }
+
+}
+.bottom {
+  @include row();
+  &__tall {
+    @extend %bottom;
+    &--pink {
+      @extend %bottom;
+      background-color: #928;
+      @extend %testing;
+      }
+    }
+
+  &__small{
+    @include media(map-get($breakpoints, 'medium')) {
+      @include span-columns(3);
+    }
+  }
+}
+
+
+.article-small {
+  @include span-columns(12);
+  @extend %testing;
+}

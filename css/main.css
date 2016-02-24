@@ -1,0 +1,252 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box; }
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: #e50050;
+  text-decoration: none; }
+  a:hover, a:active, a:focus {
+    color: #222222;
+    text-decoration: underline; }
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: #222222;
+  font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table; }
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  max-width: 68em;
+  /* 1 */
+  margin-left: auto;
+  /* 2 */
+  margin-right: auto;
+  /* 2 */
+  padding-left: 20px;
+  /* 3 */
+  padding-right: 20px;
+  /* 3 */
+  width: 100%;
+  /* 1 */ }
+
+/**
+ * Hide text while making it readable for screen readers
+ * 1. Needed in WebKit-based browsers because of an implementation bug;
+ *    See: https://code.google.com/p/chromium/issues/detail?id=457146
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  /* 1 */
+  text-indent: 101%;
+  white-space: nowrap; }
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.bottom__tall, .bottom__tall--pink, .header, .top__featured, .top__side, .article-small {
+  height: 100px;
+  border: 1px dotted black; }
+
+.bottom__tall, .bottom__tall--pink {
+  float: left;
+  display: block;
+  margin-right: 1.35446%;
+  width: 49.32277%; }
+  .bottom__tall:last-child, .bottom__tall--pink:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .bottom__tall, .bottom__tall--pink {
+      float: left;
+      display: block;
+      margin-right: 1.35446%;
+      width: 23.98416%; }
+      .bottom__tall:last-child, .bottom__tall--pink:last-child {
+        margin-right: 0; } }
+
+section {
+  width: 95%;
+  margin: auto; }
+
+.header {
+  float: left;
+  display: block;
+  margin-right: 1.35446%;
+  width: 100%; }
+  .header:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 768px) {
+    .header {
+      float: left;
+      display: block;
+      margin-right: 1.35446%;
+      width: 15.53795%; }
+      .header:last-child {
+        margin-right: 0; } }
+
+@media screen and (min-width: 768px) {
+  .content {
+    float: left;
+    display: block;
+    margin-right: 1.35446%;
+    width: 83.10759%; }
+    .content:last-child {
+      margin-right: 0; } }
+
+.top {
+  display: block; }
+  .top::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .top__featured {
+    float: left;
+    display: block;
+    margin-right: 1.35446%;
+    width: 100%; }
+    .top__featured:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 768px) {
+      .top__featured {
+        float: left;
+        display: block;
+        margin-right: 1.35446%;
+        width: 74.66139%; }
+        .top__featured:last-child {
+          margin-right: 0; } }
+  .top__side {
+    float: left;
+    display: block;
+    margin-right: 1.35446%;
+    width: 100%; }
+    .top__side:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 768px) {
+      .top__side {
+        float: left;
+        display: block;
+        margin-right: 1.35446%;
+        width: 23.98416%; }
+        .top__side:last-child {
+          margin-right: 0; } }
+
+.bottom {
+  display: block; }
+  .bottom::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .bottom__tall--pink {
+    background-color: #928; }
+  @media screen and (min-width: 768px) {
+    .bottom__small {
+      float: left;
+      display: block;
+      margin-right: 1.35446%;
+      width: 23.98416%; }
+      .bottom__small:last-child {
+        margin-right: 0; } }
+
+.article-small {
+  float: left;
+  display: block;
+  margin-right: 1.35446%;
+  width: 100%; }
+  .article-small:last-child {
+    margin-right: 0; }
+
+/*# sourceMappingURL=main.css.map */
