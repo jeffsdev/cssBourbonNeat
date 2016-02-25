@@ -23,10 +23,48 @@ section {
 
 .header {
   @include span-columns(12);
-  @extend %testing;
-
+  height: 40px;
+  overflow: hidden;
+  color: $nav-blue;
+  @include media(map-get($breakpoints, 'medium')) {
+    height:80px;
+  }
+  @include media(map-get($breakpoints, 'medium')) {
+    height:100%;
+  }
   @include media(map-get($breakpoints, 'large')) {
     @include span-columns(2);
+  }
+  &__date {
+    @include span-columns(8) ;
+    @include media(map-get($breakpoints, 'large')) {
+      @include span-columns(12);
+    }
+    h3{
+      padding: 0.2em;
+      font-size: 1.2em;
+    }
+    h4{
+      padding: 0.3em;
+      font-size: 0.8em;
+    }
+  }
+  &__weather {
+    @include direction-context(right-to-left) {
+      @include span-columns(4);
+    }
+    @include media(map-get($breakpoints, 'large')) {
+      @include span-columns(12);
+    }
+    i{
+      @extend %li;
+    }
+    li:first-child {
+      @include media(map-get($breakpoints, 'large')) {
+        @include span-columns(12);
+        font-size: 2em;
+      }
+    }
   }
 }
 
