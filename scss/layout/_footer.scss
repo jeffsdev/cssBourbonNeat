@@ -1,11 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+.page__bottom {
+  width: 100%;
+  background: $dark-grey;
+}
 
 .footer {
   padding: 1em 1em 0 1em;
-  background: #484848;
-  color: white;
+  background: $dark-grey;
+  color: $text-white;
   overflow: auto;
   ul {
     padding-top: 1em;
@@ -21,7 +25,7 @@
         width: 33.33%;
       }
       a{
-        color: #ccc;
+        color: lighten($dark-grey, 20%);
       }
     }
   }
@@ -40,8 +44,8 @@
     }
     button{
       display: inline-block;
-      color: white;
-      background: #767676;
+      color: $text-white;
+      background: lighten($dark-grey, 20%);
       @extend %button;
       width: 100px;
     }
@@ -49,12 +53,4 @@
       @extend %button;
     }
   }
-}
-
-%button {
-  height: 35px;
-  border-radius: 50px;
-  margin-bottom: 1em;
-  font-size: 0.7em;
-
 }

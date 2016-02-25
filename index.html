@@ -7,42 +7,43 @@
     <link rel="stylesheet" href="css/main.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-    <section class="nav">
-        <ul class="nav__top">
-          <li><a href="#"><i class="fa fa-user"></i><span>Sign in</span></a></li>
-          <li><a href="#"><i class="fa fa-search"></i><span>Subscribe</span></a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">US</a></li>
-        </ul>
+    <header class="page__top">
+      <section class="nav">
+          <ul class="nav__top">
+            <li><a href="#"><i class="fa fa-user"></i><span>Sign in</span></a></li>
+            <li><a href="#"><i class="fa fa-search"></i><span>Subscribe</span></a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">US</a></li>
+          </ul>
 
-        <div class="logo">
-          <picture>
-            <source media="(min-width: 650px)" srcset="img/logo-big.png">
-            <img src="img/logo-small.png" alt="" />
-          </picture>
-        </div>
-
-
-        <ul class="nav__bottom">
-          <li><a href="#"><i class="fa fa-bars"></i></a></li>
-          <li><a href="#">Elections</a></li>
-          <li><a href="#">US</a></li>
-          <li><a href="#">world</a></li>
-          <li><a href="#">opinion</a></li>
-          <li><a href="#">sports</a></li>
-          <li><a href="#">soccer</a></li>
-          <li><a href="#">tech</a></li>
-          <li><a href="#">arts</a></li>
-          <li><a href="#">lifestyle</a></li>
-          <li><a href="#">fashion</a></li>
-          <li><a href="#">bus</a></li>
-
-          <!-- <li><a href="#">business</a></li> -->
-        </ul>
-    </section>
+          <div class="logo">
+            <picture>
+              <source media="(min-width: 650px)" srcset="img/logo-big.png">
+              <img src="img/logo-small.png" alt="" />
+            </picture>
+          </div>
 
 
-    <section class="headlines">
+          <ul class="nav__bottom">
+            <li><a href="#"><i class="fa fa-bars"></i></a></li>
+            <li><a href="#">Elections</a></li>
+            <li><a href="#">US</a></li>
+            <li><a href="#">world</a></li>
+            <li><a href="#">opinion</a></li>
+            <li><a href="#">sports</a></li>
+            <li><a href="#">soccer</a></li>
+            <li><a href="#">tech</a></li>
+            <li><a href="#">arts</a></li>
+            <li><a href="#">lifestyle</a></li>
+            <li><a href="#">fashion</a></li>
+            <li><a href="#">bus</a></li>
+
+            <!-- <li><a href="#">business</a></li> -->
+          </ul>
+      </section>
+    </header>
+
+    <section class="headlines clearfix">
       <div class="header">
         <div class="header__date">
           <h3>headlines</h3>
@@ -57,8 +58,8 @@
       </div>
 
       <div class="content">
-        <div class="top">
-          <div class="top__featured">
+        <div class="primary">
+          <div class="primary__featured">
             <div class="featured-wrapper">
               <img src="img/person.jpg" alt="" />
               <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consec adipisicing elit.</h5>
@@ -67,7 +68,7 @@
               </p>
             </div>
           </div>
-          <div class="top__side">
+          <div class="primary__side">
             <div class="article-wrapper">
               <picture>
                 <source srcset="img/coin.jpg" media="(min-width: 1250px)">
@@ -79,8 +80,8 @@
           </div>
         </div>
 
-        <div class="bottom">
-          <div class="bottom__tall--pink">
+        <div class="secondary">
+          <div class="secondary__tall--pink">
             <div class="article-wrapper">
               <picture>
                 <source srcset="img/coin.jpg" media="(min-width: 1250px)">
@@ -90,7 +91,7 @@
               <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
             </div>
           </div>
-          <div class="bottom__tall">
+          <div class="secondary__tall">
             <div class="article-wrapper">
               <picture>
                 <source srcset="img/coin.jpg" media="(min-width: 1250px)">
@@ -100,25 +101,25 @@
               <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
             </div>
           </div>
-          <div class="bottom__small">
-            <div class="article-small">
+          <div class="secondary__short">
+            <div class="article-preview">
               <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
             </div>
-            <div class="article-small">
+            <div class="article-preview--pink">
               <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
             </div>
-            <div class="article-small">
+            <div class="article-preview">
               <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
             </div>
           </div>
-          <div class="bottom__small">
-            <div class="article-small">
+          <div class="secondary__short">
+            <div class="article-preview">
               <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
             </div>
-            <div class="article-small">
+            <div class="article-preview">
               <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
             </div>
-            <div class="article-small">
+            <div class="article-preview">
               <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
             </div>
           </div>
@@ -128,24 +129,103 @@
 
     </section>
 
-    <section class="footer">
-      <form class="footer__form">
-        <label for="email">Sign up for your daily email</label>
-        <input type="text" name="email" value="" placeholder="Enter your email">
-        <button type="button" name="button">Sign here</button>
-        <label for="">No spam ever</label>
-      </form>
-      <ul class="footer__list">
-        <li><a href="#">facebook</a></li>
-        <li><a href="#">twitter</a></li>
-        <li><a href="#">jobs</a></li>
-        <li><a href="#">all topics</a></li>
-        <li><a href="#">about us</a></li>
-        <li><a href="#">contact us</a></li>
-        <li><a href="#">cookies</a></li>
-        <li><a href="#">securedrop</a></li>
-        <li><a href="#">map</a></li>
-      </ul>
+    <section class="headlines clearfix">
+      <div class="header">
+        <div class="header__date">
+          <h3>highlights</h3>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="primary">
+          <div class="primary__featured--pink">
+            <div class="featured-wrapper">
+              <img src="img/person.jpg" alt="" />
+              <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consec adipisicing elit.</h5>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+              </p>
+            </div>
+          </div>
+          <div class="primary__side">
+            <div class="article-wrapper">
+              <picture>
+                <source srcset="img/coin.jpg" media="(min-width: 1250px)">
+                <source srcset="img/coin-md.jpg" media="(min-width: 768px)">
+                <img src="img/coin-sm.jpg" alt="" />
+              </picture>
+              <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+            </div>
+          </div>
+        </div>
+
+        <div class="secondary">
+          <div class="secondary__tall">
+            <div class="article-wrapper">
+              <picture>
+                <source srcset="img/coin.jpg" media="(min-width: 1250px)">
+                <source srcset="img/coin-md.jpg" media="(min-width: 768px)">
+                <img src="img/coin-sm.jpg" alt="" />
+              </picture>
+              <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+            </div>
+          </div>
+          <div class="secondary__tall">
+            <div class="article-wrapper">
+              <picture>
+                <source srcset="img/coin.jpg" media="(min-width: 1250px)">
+                <source srcset="img/coin-md.jpg" media="(min-width: 768px)">
+                <img src="img/coin-sm.jpg" alt="" />
+              </picture>
+              <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+            </div>
+          </div>
+          <div class="secondary__short">
+            <div class="article-preview">
+              <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+            </div>
+            <div class="article-preview">
+              <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+            </div>
+            <div class="article-preview">
+              <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+            </div>
+          </div>
+          <div class="secondary__short">
+            <div class="article-preview">
+              <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+            </div>
+            <div class="article-preview">
+              <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+            </div>
+            <div class="article-preview--pink">
+              <h5><a href="#">Jimmy Savile / </a>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <footer class="page__bottom">
+      <section class="footer">
+        <form class="footer__form">
+          <label for="email">Sign up for your daily email</label>
+          <input type="text" name="email" value="" placeholder="Enter your email">
+          <button type="button" name="button">Sign here</button>
+          <label for="">No spam ever</label>
+        </form>
+        <ul class="footer__list">
+          <li><a href="#">facebook</a></li>
+          <li><a href="#">twitter</a></li>
+          <li><a href="#">jobs</a></li>
+          <li><a href="#">all topics</a></li>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">contact us</a></li>
+          <li><a href="#">cookies</a></li>
+          <li><a href="#">securedrop</a></li>
+          <li><a href="#">map</a></li>
+        </ul>
+      </section>
+    </footer>
   </body>
 </html>

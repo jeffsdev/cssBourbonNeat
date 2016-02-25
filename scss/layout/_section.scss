@@ -1,49 +1,9 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the sections of the site/application.
 // -----------------------------------------------------------------------------
-
-%testing {
-  min-height: 55px;
-
-  border: 1px dotted black;
-}
-
-%tall{
-  @include media(map-get($breakpoints, 'medium')) {
-    height: 236px;
-  }
-  @include media(map-get($breakpoints, 'x-large')) {
-    height: 310px;
-  }
-}
-
-%article--picture {
-  @include span-columns(12);
-  img {
-    float:left;
-    padding: 0.2em 0.5em 0.2em 0.5em;
-  }
-  @include media(map-get($breakpoints, 'medium')) {
-    @include span-columns(3);
-    img {
-      float: none;
-      padding: 0.2em 0 0.5em 0;
-    }
-  }
-
-}
-
-%article{
-  overflow: hidden;
-  line-height: 1.01em;
-  padding: 0 0.5em;
-  background-color: #f6f6f6;
-  margin-bottom: 0.8em;
-  border-top: 1px solid #005689;
-  font-size: 0.8em;
-  a{
-    color: $nav-blue;
-  }
+.page__top {
+  width: 100%;
+  background: $nav-blue;
 }
 
 section {
@@ -111,102 +71,42 @@ section {
   }
 }
 
-.top {
+.primary {
   @include row();
   &__featured {
-    @extend %article;
-    @include span-columns(12);
-    padding-bottom: 16px;
-    @extend %tall;
-    img {
-      margin: auto;
-      width: 100%;
-      @include media(map-get($breakpoints, 'medium')) {
-        width: 380px;
-        float: right;
-        padding-left: 1em;
-        padding-bottom: 22px;
-      }
-      @include media(map-get($breakpoints, 'large')) {
-        width: 420px;
-      }
-      @include media(map-get($breakpoints, 'x-large')) {
-        width: 500px;
-      }
+    @extend %article--featured;
+    &--pink{
+      @extend %article--featured;
+      @extend %article--pink;
     }
-    h5 {
-      font-size: 1.35em;
-      line-height: 1em;
-    }
-    @include media(map-get($breakpoints, 'medium')) {
-      @include span-columns(9);
-    }
-    p {
-      margin-top: 1em;
-      color: #888;
-      display: none;
-      @include media(map-get($breakpoints, 'x-large')) {
-        display: block;
-      }
+    .featured-wrapper {
+      padding: 0.2em 0.5em 0 0.5em;
     }
   }
   &__side {
-    @extend %tall;
-    @extend %article--picture;
-    @extend %article;
+    @extend %article--tall;
   }
 }
 
-.bottom {
+.secondary {
   @include row();
   &__tall {
-    @extend %tall;
-    @extend %article;
-    @extend %article--picture;
+      @extend %article--tall;
     &--pink {
-      @extend %article;
-      @extend %article--picture;
-      @extend %tall;
-      background-color: #928;
-      color: white;
-      a {
-        color:#fdadba;
-      }
-      }
+      @extend %article--tall;
+      @extend %article--pink;
     }
-  &__small{
+  }
+  &__short {
     @include media(map-get($breakpoints, 'medium')) {
       @include span-columns(3);
     }
   }
-}
-
-.article-small {
-  @include span-columns(12);
-  padding: 0.2em 0.5em 0 1em;
-  @extend %article;
-  height: 55px;
-  @include media(map-get($breakpoints, 'medium')) {
-    height: 70px;
-
-  }
-  @include media(map-get($breakpoints, 'x-large')) {
-    height: 95px;
-  }
-}
-
-.featured-wrapper {
-  padding: 0.2em 0.5em 0 0.5em;
-
-}
-
-.article-wrapper{
-  @include media(map-get($breakpoints, 'medium')) {
-    max-width: 160px;
-    margin: auto;
-  }
-  @include media(map-get($breakpoints, 'x-large')) {
-    max-width: 220px;
+  .article-preview{
+    @extend %article--small;
+    &--pink {
+      @extend %article--small;
+      @extend %article--pink;
     }
-
+  }
 }
