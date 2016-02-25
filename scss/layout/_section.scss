@@ -3,22 +3,56 @@
 // -----------------------------------------------------------------------------
 
 %testing {
-  min-height: 100px;
+  min-height: 55px;
+
   border: 1px dotted black;
 }
 
+%tall{
+  @include media(map-get($breakpoints, 'medium')) {
+    height: 236px;
+  }
+  @include media(map-get($breakpoints, 'x-large')) {
+    height: 310px;
+  }
+}
 
-%bottom {
+%article--picture {
   @include span-columns(12);
-  @extend %testing;
+  img {
+    float:left;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+  }
   @include media(map-get($breakpoints, 'medium')) {
     @include span-columns(3);
+    img {
+      float: none;
+      padding: 0.2em 0 0 0;
+    }
+  }
+
+}
+
+%article{
+  overflow: hidden;
+  line-height: 1.01em;
+  padding: 0 0.5em;
+  background-color: #f6f6f6;
+  margin-bottom: 0.8em;
+  border-top: 1px solid #005689;
+  font-size: 0.8em;
+  a{
+    color: $nav-blue;
   }
 }
 
 section {
   width: 95%;
+  max-width: 1300px;
   margin: auto;
+  &.headlines {
+    margin-top: 0.5em;
+  }
 }
 
 .header {
@@ -80,29 +114,52 @@ section {
 .top {
   @include row();
   &__featured {
+    @extend %article;
     @include span-columns(12);
-    @extend %testing;
+    padding-bottom: 16px;
+    @extend %tall;
+    img {
+      margin: auto;
+      width: 100%;
+      @include media(map-get($breakpoints, 'medium')) {
+        width: 380px;
+        float: right;
+        padding-left: 1em;
+        padding-bottom: 22px;
+      }
+      @include media(map-get($breakpoints, 'large')) {
+        width: 420px;
+      }
+      @include media(map-get($breakpoints, 'x-large')) {
+        width: 500px;
+      }
+    }
+    h5 {
+      font-size: 1.35em;
+      line-height: 1em;
+    }
     @include media(map-get($breakpoints, 'medium')) {
       @include span-columns(9);
     }
   }
   &__side {
-    @include span-columns(12);
-    @extend %testing;
-    @include media(map-get($breakpoints, 'medium')) {
-      @include span-columns(3);
-    }
+    @extend %tall;
+    @extend %article--picture;
+    @extend %article;
   }
 }
 
 .bottom {
   @include row();
   &__tall {
-    @extend %bottom;
+    @extend %tall;
+    @extend %article;
+    @extend %article--picture;
     &--pink {
-      @extend %bottom;
+      @extend %article;
+      @extend %article--picture;
       background-color: #928;
-      @extend %testing;
+      @extend %tall;
       }
     }
   &__small{
@@ -114,5 +171,30 @@ section {
 
 .article-small {
   @include span-columns(12);
-  @extend %testing;
+  padding: 0.2em 0.5em 0 1em;
+  @extend %article;
+  height: 55px;
+  @include media(map-get($breakpoints, 'medium')) {
+    height: 70px;
+
+  }
+  @include media(map-get($breakpoints, 'x-large')) {
+    height: 95px;
+  }
+}
+
+.featured-wrapper {
+  padding: 0.2em 0.5em 0 0.5em;
+
+}
+
+.article-wrapper{
+  @include media(map-get($breakpoints, 'medium')) {
+    max-width: 160px;
+    margin: auto;
+  }
+  @include media(map-get($breakpoints, 'x-large')) {
+    max-width: 220px;
+    }
+
 }
