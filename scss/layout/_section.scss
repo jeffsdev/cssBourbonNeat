@@ -27,7 +27,7 @@
     @include span-columns(3);
     img {
       float: none;
-      padding: 0.2em 0 0 0;
+      padding: 0.2em 0 0.5em 0;
     }
   }
 
@@ -141,6 +141,14 @@ section {
     @include media(map-get($breakpoints, 'medium')) {
       @include span-columns(9);
     }
+    p {
+      margin-top: 1em;
+      color: #888;
+      display: none;
+      @include media(map-get($breakpoints, 'x-large')) {
+        display: block;
+      }
+    }
   }
   &__side {
     @extend %tall;
@@ -158,8 +166,12 @@ section {
     &--pink {
       @extend %article;
       @extend %article--picture;
-      background-color: #928;
       @extend %tall;
+      background-color: #928;
+      color: white;
+      a {
+        color:#fdadba;
+      }
       }
     }
   &__small{

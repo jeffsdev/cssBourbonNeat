@@ -3,20 +3,58 @@
 // -----------------------------------------------------------------------------
 
 .footer {
-  @extend %testing;
+  padding: 1em 1em 0 1em;
+  background: #484848;
+  color: white;
   overflow: auto;
   ul {
-    @include span-columns(6);
-    @extend %testing;
+    padding-top: 1em;
+    @include span-columns(12);
+    @include media(map-get($breakpoints, 'medium')) {
+      @include span-columns(9);
+    }
     li {
-      width: 33%;
+      width: 50%;
       float: left;
-      @extend %testing;
+      @extend %button;
+      @include media(map-get($breakpoints, 'medium')) {
+        width: 33.33%;
+      }
+      a{
+        color: #ccc;
+      }
     }
   }
   &__form {
-    @include span-columns(6);
-    @extend %testing;
-    background-color: green;
+    @include span-columns(12);
+    @include media(map-get($breakpoints, 'medium')) {
+      @include span-columns(3);
+    }
+   label {
+      display: block;
+      font-size: 0.7em;
+      &:first-child {
+        margin-bottom: 0.7em;
+        font-weight: bold;
+      }
+    }
+    button{
+      display: inline-block;
+      color: white;
+      background: #767676;
+      @extend %button;
+      width: 100px;
+    }
+    input{
+      @extend %button;
+    }
   }
+}
+
+%button {
+  height: 35px;
+  border-radius: 50px;
+  margin-bottom: 1em;
+  font-size: 0.7em;
+
 }
